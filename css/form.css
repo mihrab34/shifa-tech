@@ -1,0 +1,81 @@
+.navbar {
+  background: #fff;
+  border-bottom: 2px solid #f1f1f1;
+}
+.nav-link {
+  color: #000000;
+  font-size: 17px;
+}
+
+.login-form,
+ .reg-form {
+  /* min-height: fit-content; */
+  margin-top: 20px;
+}
+.login-word,
+.reg-word{
+  background: #4d4e4f;
+  color: #fff;
+  font-weight: 700;
+  padding: 1.2rem;
+}
+
+.card {
+  background: #f1f1f1;
+}
+
+fieldset {
+  border: 0;
+  padding: 12px 0px 30px 0px;
+  /* margin: auto; */
+}
+
+/* input {
+  display: block;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #c6c7cc;
+  border-radius: 3px;
+}*/
+
+#remember {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: #d8452e;
+  color: #fff;
+  font-weight: 800;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* width: 100%; */
+  margin-top: -15px;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.registerbtn {
+  background-color: #d8452e;
+  color: #fff;
+  font-weight: 800;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 10px;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.psw a {
+  color: #d8452e;
+  margin-right: 250px;
+  padding: 20px;
+}
+
+.psw a:hover {
+  color: #d8452e;
+}
+
+@media screen and (max-width: 600px) {
+  
+}

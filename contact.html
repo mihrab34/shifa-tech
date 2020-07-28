@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/home.css">
+  <title>Contact</title>
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="image/shifalogo.jpeg" alt="logo" width="120"></a>
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html" id="home">Home <span class="sr-only">(current)</span></a></li>
+        
+       <li class="nav-item"> <a class="nav-link" href="#">Product Manual </a></li>
+       <li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
+       <li class="nav-item"><a class="nav-link" href="blog.html">Blog </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container contact-form">
+    <form class="card">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">U.K</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="nigeria">Nigeria</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+</body>
+</html>
