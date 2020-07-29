@@ -58,6 +58,7 @@ z-index: 1;
 
 .card {
   border: 1px thin gainsboro;
+  /* border-radius: 30%; */
   background: transparent;
   color: #000;
   margin-right: 12px;
