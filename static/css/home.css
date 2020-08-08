@@ -5,6 +5,8 @@
 
 .navbar-nav .nav-link {
   color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 }
 
 .active .nav-link {

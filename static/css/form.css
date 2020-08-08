@@ -1,23 +1,30 @@
-.navbar {
+/* .navbar {
   background: #fff;
   border-bottom: 2px solid #f1f1f1;
 }
 .nav-link {
   color: #000000;
   font-size: 17px;
+} */
+
+.main-form {
+  min-height: 500px;
 }
 
 .login-form,
  .reg-form {
-  /* min-height: fit-content; */
+  /* height: 400px; */
   margin-top: 20px;
+  padding: 10px;
 }
 .login-word,
 .reg-word{
   background: #4d4e4f;
   color: #fff;
   font-weight: 700;
+  font-family: 'Roboto', sans-serif;
   padding: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -30,13 +37,10 @@ fieldset {
   /* margin: auto; */
 }
 
-/* input {
-  display: block;
-  margin-top: 5px;
-  padding: 8px;
-  border: 1px solid #c6c7cc;
-  border-radius: 3px;
-}*/
+label {
+  margin-top: 15px;
+  /* padding: 8px; */
+}
 
 #remember {
   display: inline-block;
