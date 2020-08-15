@@ -9,5 +9,10 @@
   <p>Likes: {{review.likes}}</p>
   <p>Dislikes: {{review.dislikes}}</p>
   <p>Date: {{review.date_created}}</p>
+  <span>
+    <a href="{% url 'like' review.id %}" class="btn btn-success">Like</a>
+    <a href="{% url 'dislike' review.id %}" class="btn btn-danger">Dislike</a>
+  </span>
 </div>
+
 {% endblock content %}

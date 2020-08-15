@@ -1,88 +1,91 @@
-{% extends '_base.html' %}
-{% load static %}
-{% block content %}
+{% extends '_base.html' %} {% load static %} {% block content %}
 
 <main>
-  <div class="container-fluid main">
+  <div class="container main">
     <div class="row">
       <div class="col-sm-12">
-        <h4> ShiVent</h4>
-        <div class="overlay"></div>
+        <h4>ShiVent</h4>
       </div>
-
     </div>
   </div>
+  <div class="container about">
+    <div class="row mb-5">
+      <div class="col-sm-12 col-md-6 about-us border-right border-sm-0 border-white mt-4 mt-md-0 ">
+        <h4>Why?</h4>
+        <p>
+          "Shifa Technologies" was estalished in response to the Covid-19
+          pandemic to address the shortage supply of ventilators which is
+          critical to supporting patients with respiratory distress.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6 about-us">
+        <h4>What?</h4>
+        <p>
+          We have developeved <span>Shivent:</span> a non-electric, non-invasive
+          ventilator that operates on the principle of bubble CPAC (Continous
+          Positive Airways Pressure) that prevents the Airways deterioration.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row mt-5 mb-5">
-      <div class="col-sm-12 col-md-6 about-us">
-        <h4>Who We are</h4>
-        <p>Shifa Technologies Ltd was set up in response to the Covid-19 pandemic given the limited supply of
-          ventilators and the strain that it has caused for health systems globally</p>
-
-      </div>
       <div class="col-sm-12 col-md-6">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/WkiOzpttjb4" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/WkiOzpttjb4"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+        <h4>Functionality Test</h4>
+        <p>Shivent has passed 2 functionality test carried out on:</p>
+        <ol>
+          <li>
+            23rd May 2020 at the National Centre for Sports and Exercise
+            Medicine, Loughborough University, United Kingdom
+          </li>
+          <li>
+            10th June 2020 at the Royal Infirmary Hospital, Leicester, United
+            Kingdom
+          </li>
+        </ol>
+        <p>We are planning a pilot project in Lagos Nigeria for October 2020</p>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <h4 class="product">Product</h4>
-    <div class="row mb-5">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Bubble CPAP Kit</h4>
-            <p class="card-text">
-              The ShiVent is a Bubble CPAP (Continuous Positive Airway Pressure)kit with specialised cap and an
-              oxygen/air blender offering a non-invasive mode of ventilation to assist COVID19 patients with breathing
-              difficulties.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Low Cost 3D-printed Material</h4>
-            <p class="card-text">
-              The kit comprises of a mixture of 3D-printed components and readily available materials within hospital
-              settings such as medical tubing, oxygen mask and plastic jar available off the shelf.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Easy Set-up and Non-Electricity Dependent</h4>
-            <p class="card-text">
-              Low tech, easy to set up and non-electricity dependent.Cost only a fraction of the cost of regular
-              Bubble CPAP which average $2,000.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Low Resource Setting</h4>
-            <p class="card-text">
-              It is also able to plug into existing oxygen supply channels in hospitals, making it suitable for low
-              resource settings.
-            </p>
-          </div>
-        </div>
+  <div class=" container digital">
+    <div class="row">
+      <div class="col-sm-12 text-center digital-text mt-5 pt-4">
+        
+        <h4>Digital Platform</h4>
+        <p>Digitalization of a non-electrical product is pushing the boundaries of possibilities. Our digital 
+          platform offers  onboarding, installation, usage training and manuals for Doctors, Nurses and Medical practioners
+          on how to use the ShiVent and manage patient records. Futhermore,it enables medical practioners to share experiences
+          while adhereing to GDPR standards</p>
+        
       </div>
     </div>
-
+  </div>
+  <div class="container mt-5">
     <h4 class="team">Team members</h4>
     <div class="row mt-3 members">
       <div class="col-md-2.4">
         <div class="card">
-          <div class="card-body">
-            <img src="{% static 'images/Yusuf Shittu.jpg' %}" alt="member one" class="card-title" width="150" height="150">
+          <div class="card-body member-img">
+            <img
+              src="{% static 'images/Yusuf Shittu.jpg' %}"
+              alt="member one"
+              class="card-title"
+              width="150"
+              height="150"
+            />
             <p class="card-text">
               Dr Yusuf Shittu
             </p>
@@ -91,8 +94,14 @@
       </div>
       <div class="col-md-2.4">
         <div class="card">
-          <div class="card-body">
-            <img src="{% static 'images/Yusuf Bilesanmi.jpg' %}" alt="member two" class="card-title" width="150" height="150">
+          <div class="card-body member-img">
+            <img
+              src="{% static 'images/Yusuf Bilesanmi.jpg' %}"
+              alt="member two"
+              class="card-title"
+              width="150"
+              height="150"
+            />
             <p class="card-text">
               Yusuf Oladipupo B.
             </p>
@@ -101,8 +110,14 @@
       </div>
       <div class="col-md-2.4">
         <div class="card">
-          <div class="card-body">
-            <img src="{% static 'images/Ricardo.jpg' %}" alt="member three" class="card-title0" width="150" height="150">
+          <div class="card-body member-img">
+            <img
+              src="{% static 'images/Ricardo.jpg' %}"
+              alt="member three"
+              class="card-title0"
+              width="150"
+              height="150"
+            />
             <p class="card-text">
               Ricardo O' Nascimento,.
             </p>
@@ -111,8 +126,14 @@
       </div>
       <div class="col-md-2.4">
         <div class="card">
-          <div class="card-body">
-            <img src="{% static 'images/Pawel.jpg' %}" alt="member four" class="card-title0" width="150" height="150">
+          <div class="card-body member-img">
+            <img
+              src="{% static 'images/Pawel.jpg' %}"
+              alt="member four"
+              class="card-title0"
+              width="150"
+              height="150"
+            />
             <p class="card-text">
               Pawel Nycz
             </p>
@@ -121,9 +142,14 @@
       </div>
       <div class="col-md-2.4">
         <div class="card">
-          <div class="card-body">
-            <img src="{% static 'images/WhatsApp Image 2020-04-01 at 15.09.01.jpeg' %}" alt="member five" class="card-title0"
-              width="150" height="150">
+          <div class="card-body member-img">
+            <img
+              src="{% static 'images/gaurav.jpg' %}"
+              alt="member five"
+              class="card-title0"
+              width="150"
+              height="150"
+            />
             <p class="card-text">
               Gaurav Nanajkar
             </p>
@@ -133,7 +159,9 @@
     </div>
   </div>
 </main>
-{% endblock %}
+
 <footer>
   <p>Contact: info.shifa@gmail.com | +44(0)7492535908</p>
-</footer> 
+</footer>
+
+{% endblock %}

@@ -1,73 +1,117 @@
 .navbar {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(224, 223, 223);
   background: #fff;
 }
 
 .navbar-nav .nav-link {
   color: #000;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
+  margin-right: 20px;
 }
 
-.active .nav-link {
+#home:hover{
   color: #d8452e;
 }
 
-.nav-link:active {
+.nav-link:hover {
   color: #d8452e;
 }
 
 .main {
-background-image: url("../images/background.jpg");
+background-image: url("../images/main_image.jpg");
 background-size: cover;
 background-repeat: no-repeat;
-min-height: 300px;
-max-width: 100%;
-margin-bottom: 30px;
+min-height: 400px;
+max-width: 90%;
+/* margin-bottom: 30px; */
 z-index: 1;
 }
 
-.overlay {
+/* .overlay {
   background: #232d50;
-  min-height: 300px;
+  min-height: 200px;
   opacity: 0.6;
   margin: 0px -13px;
-}
+} */
 
 .main h4 {
   color: #fff;
   z-index: 1;
   font-weight: 600;
   text-transform: capitalize;
-  text-align: center;
+  text-align: end;
   font-size: 55px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-top: 400px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 150px;
+}
+
+.about {
+  background-color: rgba(238, 237, 237, 0.6);
 }
 
 
 .about-us h4,
-.product,
 .team {
   text-transform: uppercase;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #232d50;
+  color: #d8452e;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 20px;
+}
+
+.why {
+  /* border-right: 2px solid #ccc; */
+  /* padding: 20px; */
+  /* margin-right: 10px; */
+}
+
+.digital {
+background-image: linear-gradient(rgba(134, 178, 215, 0.7), rgba(134, 178, 215, 0.7)),url("../images/Digital_platform.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+height: 350px;
+max-width: 65%;
+z-index: -1;
+}
+
+
+.digital-text {
+  color: #fff;
+  max-width: 60%;
+  min-height: 100px;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.digital-text h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 27px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card {
-  border: 1px thin gainsboro;
-  /* border-radius: 30%; */
+  border: none;
   background: transparent;
   color: #000;
   margin-right: 12px;
 }
 
+/* .card-body {
+  border: none;
+} */
+
 .members {
   margin-left: 47px;
+}
+
+.member-img img {
+  border-radius: 50%;
 }
 
 footer {
@@ -93,6 +137,10 @@ footer p {
     max-width: 100%;
   }
 
+  /* .navbar {
+    position: sticky;
+  } */
+
   .main {
     background: #232d50;
     max-width: 100%;
@@ -101,6 +149,18 @@ footer p {
 
   .overlay {
     min-height: 60px;
+  }
+
+  .digital {
+    background-image: linear-gradient(rgba(134, 178, 215, 0.7), rgba(134, 178, 215, 0.7));
+    max-width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .digital-text {
+    max-width: 100%; 
   }
 
   .main h4 {

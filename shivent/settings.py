@@ -167,5 +167,26 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+DEFAULT_FROM_EMAIL = 'admin@shifatech.com'
+
+EMAIL_HOST = 'server193.web-hosting.com'
+
+EMAIL_HOST_USER = 'admin@shifatech.com'
+
+EMAIL_HOST_PASSWORD = 'shifatech2020'
+
+EMAIL_PORT = 587
+
+# EMAIL_USE_TLS = True
+
+# EMAIL_USE_SSL = False
+
+
+# EMAIL_HOST = 'smtp.zoho.com'
+# EMAIL_HOST_USER = 'hello@agritradingzone.com'
+# EMAIL_HOST_PASSWORD = 'Signout87#'
+# EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
