@@ -24,7 +24,7 @@ background-size: cover;
 background-repeat: no-repeat;
 min-height: 80vh;
 width: 100%;
-z-index: 1;
+z-index: -1;
 }
 
 .main h4 {
@@ -32,10 +32,13 @@ z-index: 1;
   z-index: 1;
   font-weight: 600;
   text-transform: capitalize;
-  text-align: end;
-  font-size: 55px;
+  text-align: start;
+  font-size: 70px;
   font-family: 'Roboto', sans-serif;
-  margin-top: 150px;
+  margin-top: 350px;
+  margin-left: 1600px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .about {
@@ -139,6 +142,17 @@ z-index: -1;
   border-radius: 50%;
 }
 
+.card-text {
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 20px;
+}
+
+.card-body p {
+  text-transform: capitalize;
+  font: 15px 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 footer {
   background:  #275880;
   margin-top: 30px;
@@ -158,11 +172,16 @@ footer {
   font-weight: 500;
 }
 
+.fa {
+  font-size: 1rem;
+}
+
 .contact-form {
   margin-top: 30px;
 }
 
 @media only screen and (max-width: 1200px) {
+
 .product-function{
   display: block;
   width: 100%;
@@ -184,13 +203,9 @@ footer {
   }
 
   .main {
-    background:  #3b6cb6;
+    background:  #275880;
     max-width: 100%;
-    min-height: 30vh;
-  }
-
-  .overlay {
-    min-height: 60px;
+    min-height: 40vh;
   }
 
   .product-function{
@@ -217,20 +232,31 @@ footer {
 
   .main h4 {
     font-size: 30px;
-    margin-top: 50px;
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 150px;
+    margin-left: 0;
   }
 
   .about-us h4 {
-  font-size: 30px;
-}
+    font-size: 30px;
+  }
 
-/* .team  */
-.card {
-  margin-bottom: 20px;
-}
+  .team {
+    margin: 0 auto;
+  }
 
-.members, 
-.team {
-  margin: 0 auto;
-}
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .members{
+    margin-left: 3rem;
+  }
+
+  footer {
+    width: 100%;
+    /* text-align: left; */
+    margin-right: 0;
+  }
 }
