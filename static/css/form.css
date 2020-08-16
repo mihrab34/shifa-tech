@@ -1,19 +1,9 @@
-/* .navbar {
-  background: #fff;
-  border-bottom: 2px solid #f1f1f1;
-}
-.nav-link {
-  color: #000000;
-  font-size: 17px;
-} */
-
 .main-form {
   min-height: 500px;
 }
 
 .login-form,
  .reg-form {
-  /* height: 400px; */
   margin-top: 20px;
   padding: 10px;
 }
@@ -27,6 +17,14 @@
   margin-bottom: 20px;
 }
 
+.main-form {
+  margin-top: 10rem;
+}
+
+.main-form p {
+  font-size: 22px;
+}
+
 .card {
   background: #f1f1f1;
 }
@@ -34,12 +32,10 @@
 fieldset {
   border: 0;
   padding: 12px 0px 30px 0px;
-  /* margin: auto; */
 }
 
 label {
   margin-top: 15px;
-  /* padding: 8px; */
 }
 
 #remember {
@@ -52,10 +48,14 @@ label {
   color: #fff;
   font-weight: 800;
   font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* width: 100%; */
   margin-top: -15px;
   margin-bottom: 25px;
-  padding: 10px;
+  padding: 20px;
+}
+
+.btn:hover{
+  background-color: #d8452e;
+  color: #fff;
 }
 
 .registerbtn {
@@ -66,8 +66,26 @@ label {
   padding: 10px;
 }
 
-.btn:hover {
+.blog-review,
+.blog-create{
+  margin-top: 10rem;
+}
+
+.add-post {
+  margin-left: 1000px;
+  padding: 20px;
   color: #fff;
+  font: 20px 600 Arial, Helvetica, sans-serif ;
+}
+
+.post-review {
+  margin-top: 2rem;
+}
+
+.like {
+  color: #d8452e;
+  padding-right: 20px;
+  font-size: 20px;
 }
 
 .psw a {

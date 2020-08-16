@@ -3,7 +3,8 @@
 
 
 {% block content %}
-<div class="container"> 
+<div class="container blog-review">
+  <a href="{% url 'review_create' %}" class="btn add-post">Add Post</a>
   {% for review in review_list %}
     <h2><a href="{{review.get_absolute_url }}">{{review.title}}</a></h2>
   {% endfor %}

@@ -5,11 +5,11 @@
 {% block content %}
 
 <div class="container main-form">
-  <h1>Log Out</h1>
+  <h3>Log Out?</h3>
   <p>Are you sure you want to log out?</p>
   <form method="POST" action="{% url 'account_logout' %}">
     {% csrf_token %} {{ form|crispy }}
-    <button class="btn btn-danger" type="submit">Log Out</button>
+    <button class="btn px-5 mt-4 type="submit">Log Out</button>
   </form>
 </div>
 {% endblock %}

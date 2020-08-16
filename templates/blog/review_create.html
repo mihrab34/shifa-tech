@@ -3,11 +3,11 @@
 
 {% block content %}
 <div class="container">
-    <form action="" class="form" method="POST">
+    <form action="" class="form blog-create" method="POST">
         {% csrf_token %}
         {{ form|crispy }}
         <p></p>
-        <button type="submit" class="btn btn-success">Post Review</button>
+        <button type="submit" class="btn post-review">Post Review</button>
     </form> 
 </div>
 {% endblock content %}
