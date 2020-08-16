@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+ENVIRONMENT = os.environ.get('ENVIRONMENT', default='development')
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -36,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
@@ -52,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -140,6 +145,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_FINDERS =[
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # django-allauth config
@@ -168,25 +178,24 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
 DEFAULT_FROM_EMAIL = 'admin@shifatech.com'
-
-EMAIL_HOST = 'server193.web-hosting.com'
-
+EMAIL_HOST = 'premium130.web-hosting.com'
 EMAIL_HOST_USER = 'admin@shifatech.com'
-
 EMAIL_HOST_PASSWORD = 'shifatech2020'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
-EMAIL_PORT = 587
+if ENVIRONMENT == 'production':
+    SECURE_BROWSER_XSS_FILTER = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_SSL_REDIRECT = False
+    SECURE_HSTS_SECONDS = 3600
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
-# EMAIL_USE_TLS = True
-
-# EMAIL_USE_SSL = False
-
-
-# EMAIL_HOST = 'smtp.zoho.com'
-# EMAIL_HOST_USER = 'hello@agritradingzone.com'
-# EMAIL_HOST_PASSWORD = 'Signout87#'
-# EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)

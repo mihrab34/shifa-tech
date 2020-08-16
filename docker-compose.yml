@@ -3,10 +3,12 @@ version: '3'
 services: 
     web:
         build: .
-        command: python /code/manage.py runserver 0.0.0.0:3000
+        # command: python /code/manage.py runserver 0.0.0.0:3000
+        command: gunicorn shivent.wsgi -b 0.0.0.0:3000
         environment: 
             - SECRET_KEY=sw4xfmk!ck=0i4t-1=2g&^)3p*%%-ps)6h!l&ifsu9lhcl4-d5
             - DEBUG=1
+            - ENVIRONMENT=development
         volumes: 
             - .:/code
         ports: 
