@@ -2,6 +2,8 @@ import uuid
 from django.db import models
 from django.urls import reverse
 
+from djrichtextfield.models import RichTextField
+
 from accounts.models import CustomUser
 
 # Create your models here.

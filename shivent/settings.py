@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'allauth',
     'allauth.account',
+    'djrichtextfield',
 
     # local applications
     'accounts.apps.AccountsConfig',
@@ -82,6 +83,17 @@ TEMPLATES = [
         },
     },
 ]
+
+# DJRICHTEXTFIELD_CONFIG = {
+#     'js': ['https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'],
+#     'init_template': 'djrichtextfield/init/tinymce.js',
+#     'settings': {
+#         'menubar': False,
+#         'plugins': 'link image',
+#         'toolbar': 'bold italic | link image | removeformat',
+#         'width': 1000
+#     }
+# }
 
 WSGI_APPLICATION = 'shivent.wsgi.application'
 
@@ -199,3 +211,4 @@ if ENVIRONMENT == 'production':
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+

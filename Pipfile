@@ -13,6 +13,7 @@ django-crispy-forms = "*"
 whitenoise = "*"
 gunicorn = "*"
 dj-database-url = "*"
+django-richtextfield = "*"
 
 [requires]
 python_version = "3.8"
