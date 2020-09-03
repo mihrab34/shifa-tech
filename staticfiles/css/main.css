@@ -1568,7 +1568,7 @@
 	}
 
 	body {
-		background: #1b1b1b;
+		background: #fff;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1613,7 +1613,7 @@
 /* Type */
 
 	body {
-		background-color: #1b1b1b;
+		background-color: #fff;
 		color: #fff;
 	}
 
@@ -1793,7 +1793,22 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
+		color: #d8452e;
+	}
+
+	.card-text {
 		color: #fff;
+	}
+
+	.about-us p {
+		color: #000;
+		font-size: 1.75rem;
+	}
+	.content p {
+		font-size: 1.5rem;
+	}
+	.function p {
+		line-height: 1.75rem;
 	}
 
 	blockquote {
@@ -1812,7 +1827,7 @@
 /* Box */
 
 	.box {
-		background: rgba(0, 0, 0, 0.5);
+		background: rgb(85, 84, 84, 0.7);
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
@@ -1825,9 +1840,9 @@
 			margin-bottom: 0;
 		}
 
-		.box header h2 {
+		header h2 {
 			margin: 0 0 .5em 0;
-			color: #FFF;
+			color: #fff;
 		}
 
 		.box header p {
@@ -3980,7 +3995,7 @@
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
-			background-color: #000;
+			background-color: #fff;
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
