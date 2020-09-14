@@ -1797,7 +1797,15 @@
 	}
 
 	.card-text {
-		color: #fff;
+		color: #000;
+	}
+
+	.card-body img {
+		border-radius: 50%;
+	}
+
+	.card-body p {
+		line-height: 1.2rem;
 	}
 
 	.about-us p {
@@ -3402,7 +3410,7 @@
 				height: 2.5em;
 				width: 2.5em;
 				line-height: 2.5em;
-				color: #FFF;
+				color: #000;
 				text-align: center;
 			}
 
@@ -3417,7 +3425,7 @@
 				}
 
 				#header > a[href="#menu"]:hover {
-					color: rgba(255, 255, 255, 0.25);
+					color: #000;
 					background: none;
 					box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
 				}
@@ -3484,7 +3492,7 @@
 		-webkit-overflow-scrolling: touch;
 		background: #d8452e;
 		box-shadow: none;
-		color: #ffffff;
+		color: #fff;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -3614,7 +3622,7 @@
 		-ms-justify-content: center;
 		justify-content: center;
 		background-position: center;
-		background-size: cover;
+		background-size: contain;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		border-top: 0;
@@ -3644,8 +3652,9 @@
 			line-height: 1.1;
 			font-family: "Lobster", cursive;
 			margin-bottom: .25em;
-			color: rgba(255, 255, 255, 0.75);
-			text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
+			color:#fff; 
+			 /* rgba(228, 228, 228, 0.75); */
+			/* text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125); */
 			text-transform: none;
 		}
 
@@ -3743,7 +3752,7 @@
 
 			#banner .more:before {
 				content: '\f107';
-				color: #FFF;
+				color: #000;
 				font-size: 2em;
 				position: absolute;
 				right: .425em;
@@ -3761,7 +3770,7 @@
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
-			background-color: #000;
+			/* background-color: #000; */
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
@@ -4193,17 +4202,21 @@
 
 /* Footer */
 #team {
-	background-color: #275880;
-	color: #fff;
-	padding: 6em 0 4em 0;
-	background: #275880;
+	color: #000;
+	padding: 4em 0 4em 0;
+}
+
+#team h2 {
+	text-align: center;
+	padding: 1rem;
+	font-size: 2rem;
 }
 
 	#footer {
-		background-color: #d8452e;
+		background-color: #275880;
 		color: #fff;
 		padding: 6em 0 4em 0;
-		background: #d8452e;
+		background: #275880;
 	}
 
 		#footer input, #footer select, #footer textarea {
