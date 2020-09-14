@@ -78,6 +78,7 @@
 						bg 		= post.data('bg');
 
 					post.css( 'background-image', 'url(' + bg + ')' );
+					post.css('background-size', 'contain');
 
 				});
 
