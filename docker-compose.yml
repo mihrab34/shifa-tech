@@ -5,10 +5,8 @@ services:
         build: .
         # command: python /code/manage.py runserver 0.0.0.0:3000
         command: gunicorn shivent.wsgi -b 0.0.0.0:3000
-        environment: 
-            - SECRET_KEY=sw4xfmk!ck=0i4t-1=2g&^)3p*%%-ps)6h!l&ifsu9lhcl4-d5
-            - DEBUG=1
-            - ENVIRONMENT=development
+        env_file: 
+            - .env
         volumes: 
             - .:/code
         ports: 
@@ -20,10 +18,8 @@ services:
         image: postgres:11
         volumes: 
             - postgres_data:/var/lib/postgresql/data/
-        environment: 
-            - POSTGRES_USER=shiventuser
-            - POSTGRES_PASSWORD=shifatech20
-            - POSTGRES_DB=shivent
+        env_file: 
+            - .env
     
 volumes: 
     postgres_data:

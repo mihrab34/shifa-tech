@@ -4,3 +4,4 @@ pages/__pycache__
 blog/__pycache__
 accounts/__pycache__
 .sonarlint
+.env

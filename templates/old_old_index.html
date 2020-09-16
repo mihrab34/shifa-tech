@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>ShiVent::Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="{% url 'home' %}" class="logo"><img src="{% static 'images/Shifa_logo.png' %}" alt="logo" width="150"></a>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="{% url 'home' %}">Home</a></li>
+					{% if user.is_authenticated %}
+						<li><a href="{% url 'review_list' %}">Blog</a></li>
+						<li><a href="{% url 'account_logout' %}">Log Out</a></li>
+					{% else %}
+						<li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+						<li><a href="{% url 'account_login' %}">Log In</a></li>
+					{% endif %}
+					<li><a href="{% url 'home' %}#footer">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="{% static 'images/main_image.jpg' %}">
+				<div class="inner">
+					<header>
+						<h1>ShiVent</h1>
+					</header>
+				</div>
+				<a href="#one" class="more">Learn More</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper post">
+				<div class="inner">
+					<article class="row">
+							
+						<div class="about-us col-md-6">
+							<h2>Why?</h2>
+						
+							<p>Shifa Technologies was established in response to the Covid-19 pandemic to address the shortage supply of ventilators which is critical to supporting patiets with respiratory distress.</p>
+						</div>
+						
+							
+						
+						<div class="about-us col-md-6">
+							<h2>What?</h2>
+							<p>We have developed ShiVent: a non-electric , non-invasive ventilator that operates on the principle of bubble CPAC (Continous Positive Airways Pressure) that prevents the Airways deterioration.</p>
+						</div>
+						<!-- <footer>
+							<a href="generic.html" class="button alt">Learn More</a>
+						</footer> -->
+					</article>
+				</div>
+				<a href="#two" class="more">Learn More</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper post bg-img" data-bg="{% static 'images/Digital_platform.jpg' %}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Digital Platform</h2>
+						</header>
+						<div class="content">
+							<p>Digitalization of a non-electrical product is pushing the boundaries of possibilities. Our digital platform offers onboarding, installation, usage training and manuals for Doctors, Nurses and Medical practitioners on how to use the ShiVent and manage patient records. Furthermore, it enables medical practitioners to share experiences while adhering to GDPR standards.</p>
+						</div>
+					</article>
+				</div>
+				<a href="#three" class="more">Learn More</a>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper post">
+				<div class="inner">
+					<article class="about-us">
+						<!-- <header> -->
+							<h2>Functionality Test</h2>
+						<!-- </header> -->
+						<div class="content">
+							<iframe width="800" height="400" src="https://www.youtube.com/embed/WkiOzpttjb4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="content function">
+							<header>
+								<p>ShiVent has passed 2 functionality tests carried out on: </p>
+							</header>
+							
+							
+							<p> 1-May 2020 at the National Centre for Sports and Exercise Medicine, Loughborough University, United Kingdom.</p>
+							<p>	2-10th June 2020 at the Royal Infirmary Hospital. Leicester, United Kingdom.</p>
+							<p>We are planning a pilot project in Lagos, Nigeria for October, 2020.</p>
+						</div>
+					</article>
+				</div>
+				<a href="#four" class="more">Learn More</a>
+			</section>
+
+		<!-- Four -->
+			<section id="team">
+				<div class="inner container">
+					<article>
+						<!-- <header> -->
+							<h2>The Team</h2>
+						<!-- </header> -->
+						<div>
+							<div class="row members">
+								<div class="col-md-2.4">
+								  <div class="card">
+									<div class="card-body member-img">
+									  <img
+										src="{% static 'images/YusufShittu.jpg' %}"
+										alt="member one"
+										class="card-title"
+										width="150"
+										height="150"
+									  />
+									  <h5 class="card-text">
+										Dr. Yusuf Shittu
+									  </h5>
+									  <p>- Co-Founder/Director</p>
+									  <p>- Medical Doctor</p>
+									  <p>- Global Health Innovator</p>
+									  <p>- UNLEASH Talent 2019</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col-md-2.4">
+								  <div class="card">
+									<div class="card-body member-img">
+									  <img
+										src="{% static 'images/YusufBilesanmi.jpg' %}"
+										alt="member two"
+										class="card-title"
+										width="150"
+										height="150" />
+									  <h5 class="card-text">
+										Yusuf Bilesanmi O.
+									  </h5>
+									  <p>- Founder/CEO</p>
+									  <p>- PhD Researcher, <br> Loughborough University</p>
+									  <p>- Power and Infrastructure</p>
+									  <p>- UNLEASH Talent 2019</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col-md-2.4">
+								  <div class="card">
+									<div class="card-body member-img">
+									  <img
+										src="{% static 'images/Ricardo.jpg' %}"
+										alt="member three"
+										class="card-title0"
+										width="150"
+										height="150"
+									  />
+									  <h5 class="card-text">
+										Ricardo O'Nascimento
+									  </h5>
+									  <p>- Co-Founder/Director</p>
+									  <p>- PhD Researcher, <br> Loughborough University</p>
+									  <p>- Materials & Wearable-Tech Expert</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col-md-2.4">
+								  <div class="card">
+									<div class="card-body member-img">
+									  <img
+										src="{% static 'images/Pawel.jpg' %}"
+										alt="member four"
+										class="card-title0"
+										width="150"
+										height="150"
+									  />
+									  <h5 class="card-text">
+										Pawel Nycz
+									  </h5>
+									  <p>- Co-Founder/Director</p>
+									  <p>- PhD Researcher, <br>Loughborough University</p>
+									  <p>- HVAC Expert</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col-md-2.4">
+								  <div class="card">
+									<div class="card-body member-img">
+									  <img
+										src="{% static 'images/gaurav.jpg' %}"
+										alt="member five"
+										class="card-title0"
+										width="150"
+										height="150"
+									  />
+									  <h5 class="card-text">
+										Gaurav Nanajkar
+									  </h5>
+									  <p>- Co-Founder/Director</p>
+									  <p>- PhD Researcher, <br> Loughborough University</p>
+									  <p>- CFD Expert</p>
+									</div>
+								  </div>
+								</div>
+							  </div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h2>Contact Us</h2>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+					<div class="copyright">
+						&copy; <a href="https://shifatech.com">Shifa Tech</a>
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'js/skel.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
