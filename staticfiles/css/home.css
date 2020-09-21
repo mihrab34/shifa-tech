@@ -19,26 +19,41 @@
 }
 
 .main {
-background-image: url("../images/main_image.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-min-height: 80vh;
+background: transparent url("../images/shifa-img.jpg") no-repeat fixed center center;
+object-fit: cover;
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+min-height: 100vh;
+height: auto;
+max-width: 100%;
 width: 100%;
 z-index: -1;
+position: relative;
+left: 0;
+top: 0;
+bottom: 0;
 }
+
 
 .main h4 {
   color: #fff;
-  z-index: 1;
-  font-weight: 600;
-  text-transform: capitalize;
-  text-align: start;
-  font-size: 70px;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 350px;
-  margin-left: 1600px;
-  padding-left: 30px;
-  padding-right: 30px;
+  z-index: 2;
+  position: absolute;
+  top: 26rem;
+  right: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 800px){
+  .main h4 {
+    font-size: 3.8rem;
+  }
+  
 }
 
 .about {
@@ -73,6 +88,24 @@ z-index: -1;
   margin-top: -10px;
 }
 
+iframe {
+  width: 100%;
+}
+
+
+@media screen and (min-width: 800px) {
+  iframe{
+    max-width: 100%;
+    width: 95%;
+    margin-right: 22px;
+  }
+
+  .product-function{
+    max-width: 100%;
+    margin: 0 10px 10px 0;
+  }
+}
+
 .function P{
   text-align: left;
   font-size: 20px;
@@ -81,12 +114,8 @@ z-index: -1;
 }
 
 .product-function{
-  width: 70%;
+  max-width: 90%;
   margin: 0 auto;
-}
-
-.product-vid {
-  width: 1000px;
 }
 
 .digital {
@@ -94,8 +123,8 @@ background-image: linear-gradient(rgba(134, 178, 215, 0.7), rgba(134, 178, 215, 
 background-size: cover;
 background-repeat: no-repeat;
 position: relative;
-height: 350px;
-max-width: 80%;
+height: 370px;
+max-width: 95%;
 z-index: -1;
 }
 
@@ -103,10 +132,25 @@ z-index: -1;
 .digital-text {
   color: #fff;
   max-width: 60%;
-  min-height: 100px;
   z-index: 1;
   margin: 0 auto;
   padding: 20px;
+}
+
+.digital-text p {
+  font-size: 13px;
+}
+@media screen and (min-width: 800px) {
+  .digital-text p {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 1440px){
+.digital-text p {
+  font-size: 1.3rem;
+}
+
 }
 
 .digital-text h4 {
@@ -130,12 +174,21 @@ z-index: -1;
   font-weight: 600;
   color: #275880;
   margin-bottom: 10px;
-  margin-left: 10rem;
+  margin-left: 3rem;
   padding: 10px;
 }
 
+.team-member{
+  max-width: 75%;
+}
+
 .members {
-  margin-left: 20rem;
+  margin-left: 0;
+}
+@media screen and (min-width: 800px) {
+  .members {
+    margin-left: 70px;
+  }
 }
 
 .member-img img {
@@ -145,7 +198,7 @@ z-index: -1;
 .card-text {
   font-weight: 600;
   text-transform: capitalize;
-  padding: 20px;
+  padding: 10px;
 }
 
 .card-body p {
@@ -176,83 +229,6 @@ footer {
   font-size: 1rem;
 }
 
-@media only screen and (max-width: 1200px) {
 
-.product-function{
-  display: block;
-  width: 100%;
-}
-
-.function {
-  width: 100%;
-  margin-top: 30px;
-  background-color: rgba(241, 236, 236, 0.5);
-}
-
-.members {
-  margin-left: 10rem;
-}
-}
-@media only screen and (max-width: 600px) {
-  .body {
-    width: 100%;
-  }
-
-  .main {
-    background:  #275880;
-    max-width: 100%;
-    min-height: 40vh;
-  }
-
-  .product-function{
-    width: 100%;
-  }
-
-  .function {
-    margin-top: 30px;
-    margin-left: 0;
-    text-align: left;
-  }
-
-  .digital {
-    background-image: linear-gradient(rgba(134, 178, 215, 0.7), rgba(134, 178, 215, 0.7));
-    max-width: 100%;
-    height: 100%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .digital-text {
-    max-width: 100%; 
-  }
-
-  .main h4 {
-    font-size: 30px;
-    text-align: center;
-    padding-top: 1.5rem;
-    margin-top: 150px;
-    margin-left: 0;
-  }
-
-  .about-us h4 {
-    font-size: 30px;
-  }
-
-  .team {
-    margin: 0 auto;
-  }
-
-  .card {
-    margin-bottom: 20px;
-  }
-
-  .members{
-    margin-left: 3rem;
-  }
-
-  footer {
-    width: 100%;
-    /* text-align: left; */
-    margin-right: 0;
-  }
-}
+/* #275880;  rgba(134, 178, 215, 0.7), rgba(134, 178, 215, 0.7)); */
+  
